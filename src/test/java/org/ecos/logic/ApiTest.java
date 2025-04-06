@@ -62,7 +62,7 @@ class ApiTest extends Book {
 
         // Act
     Response response2 = httpRequest.when()
-            .get("/Book?ISBN=9781449325862")
+            .get("/Book?ISBN=9781449325862")// Segunda línea de comentarios
             .then()
             .statusCode(200)
             .extract().response();
@@ -108,6 +108,6 @@ class ApiTest extends Book {
 
 
 // dudas: se puede hacer más de una llamada (Response) por test? De ese modo puedo obtener la lista de libros (sigue abajo)
-// y se podría recuperar el isbn sin necesidad de hardcodearlo (lo intente pero solo hace la primera petición de las 2)
+// y se podría recuperar el isbn sin necesidad de hardcodearlo (lo intente pero solo hace la primera petición de las 2, es decir, el primer Response)
 // ¿por que se necesita como parámetro la clase libro para almacenar el listado de libros?
 // ¿por qué el reporte del tercer test me sigue poniendo Curl GET cuando estoy haciendo un POST?
